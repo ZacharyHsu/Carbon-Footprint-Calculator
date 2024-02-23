@@ -1,3 +1,4 @@
+![alt text](https://github.com/ZacharyHsu/Carbon-Footprint-Calculator/blob/main/showcase.jpg?raw=true)
 練習 RWD :
 
 1. 主要熟悉HTML/CSS 相關語法
