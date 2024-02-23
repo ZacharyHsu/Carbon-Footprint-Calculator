@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Carbon Tiptoe! (CT)</title>
+<link rel="icon" href="icon.png" type="image/png" sizes="16x16"/>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+<style>
+body,h1,h2,h3,h4,h5,h6,img,span {font-family: Impact, fantasy;
+  margin: 0;
+	padding: 0;
+	border: 0;
+}
+ 
+
+body, html {
+  height: 100%;
+  width: 100%;
+  
+}
+body, ul, li {
+    margin: 0;
+    padding: 0;
+
+}
+ul, li {
+    list-style: none;
+}
+
+/* Full height image header */
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="nav-top custom-background-color" id="myNavbar">
+    <a href="#home" class="nav-title custom-color-alt custom-background-color-alt">CT</a>
+    <a class="nav-title-name custom-color">Carbon Tiptoe</a>
+    <!-- Right-sided navbar links -->
+    <div class="nav-right ">
+      <a href="#home" class="nav-a custom-color"><i class="fa fa-user"></i>CALCULATE</a>
+      <a href="#about" class=" nav-a custom-color">ABOUT</a>
+      <a href="#contact" class=" nav-a custom-color"><i class="fa fa-envelope"></i>CONTACT</a>
+      <a href="#register" class="nav-a custom-color-alt custom-background-color-alt nav-a-register" id="trigger-modal" onclick="openForm()" >REGISTER</a>
+    </div>
+
+
+</div>
+<!-- Header with full-height image -->
+<header class="w3-display-container" id="home">
+    <div class="header-display">
+      <div class="headr-bulletpoint custom-color-alt"><h1>Carbon Footprint Calculator</h1></div>
+      <button class="btn header-cal-button custom-background-color-alt">CALCULATE NOW</button>
+      <button class="btn header-reg-button custom-background-color-alt" id="trigger-modal" onclick="openForm()">REGISTER NOW</button>
+      <div class="header-description custom-color-alt"><h3><a>BE KIND TO OUR PLANET</a></h3></div>
+    </div> 
+  </header>
+
+  <!-- The About Us Section -->
+  <div class="about-back-color custom-background-color" id="about">
+    <div class="about-frame" >
+      <h2 class="about-title custom-color">ABOUT US</h2>
+      <p class="about-description custom-color"><i>Learn Who We Are</i></p><br>
+
+      <div class="about-common">
+        <div class="about-box">
+          <img src="team.jpg" alt="Our Team" style="width:100%" class="about-hover">
+          <div class="about-container">
+            <p>Who We Are</p>
+            <button class="btn about-button">Learn More</button>
+          </div>
+        </div>
+        <div class="about-box box-mid">
+          <img src="work.jpg" alt="Our Work" style="width:100%" class="w3-hover">
+          <div class="about-container">
+            <p>What We Do</p>
+            <button class="btn about-button">Learn More</button>
+          </div>
+        </div>
+        <div class="about-box box-right">
+          <img src="help.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="about-container">
+            <p>How To Help</p>
+            <button class="btn about-button">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section  -->
+  <div class="contact-back custom-background-color" id="contact">
+    <img class="contact-image"src="footerImage.jpg" alt="Contact Image">
+    
+    <div class="contact-right custom-background-color-alt">
+      <h2 class="contact-title custom-color-alt">CONTACT US</h2>
+      <p class="contact-description"><i>Drop a Massage!</i></p>
+      <div class="contact-right-upper">
+        <form action="/action_page.php" target="_blank">
+            <input class="input-box" type="text" placeholder="Name" required name="Name">
+            <input class="input-box box-email" type="text" placeholder="Email" required name="Email">
+            <input class="input-box box-message" type="text" placeholder="Message" required name="Message">
+            <button class="btn btn-submit custom-color" type="submit">SEND</button>
+        </form>
+      </div>
+      <p class="contact-description-2"><i>Contact for Help!</i></p>
+      <div class="contact-right-lower custom-color-alt">
+        University of Auckland<br>
+        Phone: (09) 923 5025<br>
+        Email: studentinfo@aucklanduni.ac.nz<br>
+      </div>
+    </div>
+  </div>
+  <!-- The Register Form  -->
+  <div class="popout-darken" id="ct-form-back"></div>
+  <div class="form-window custom-background-color-alt" id="ct-form">
+    <form>
+      <button class="btn-close custom-color custom-background-color" onclick="closeForm()">x</button>
+      <h2 class="form-title custom-color-alt">REGISTER</h2>
+      <div class="form-input-box form-userDetails" id="userDetails">
+        <h3 class="form-input-box-title custom-color-alt">UserDetails</h3>
+        <input class="form-input-box-input form-input-box-input-first" type="text" placeholder="Given Name"  name="GivenName">
+        <input class="form-input-box-input" type="text" placeholder="SureName"  name="SureName">
+        <input class="form-input-box-input" type="text" placeholder="Username"  name="Username">
+        <input class="form-input-box-input" type="password" placeholder="Password"  name="Password">
+      </div>
+      <div class="form-input-box form-addresses" id="addresses">
+        <h3 class="form-input-box-title custom-color-alt">Addresses</h3>
+        <input class="form-input-box-input form-input-box-2-3-input form-input-box-input-first" type="text" placeholder="Home Address"  name="HomeAddress">
+        <input class="form-input-box-input form-input-box-2-3-input" type="text" placeholder="Work Address"  name="WorkAddress">
+
+      </div>
+      <div class="form-input-box form-contacts" id="contacts">
+        <h3 class="form-input-box-title custom-color-alt">Contacts</h3>
+        <input class="form-input-box-input form-input-box-2-3-input form-input-box-input-first" type="text" placeholder="Mobile Number"  name="MobileNumber">
+        <input class="form-input-box-input form-input-box-2-3-input " type="email" placeholder="Email"  name="Email">
+
+      </div>
+      <button class="btn form-submit">Submit</button>
+
+  </form>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
